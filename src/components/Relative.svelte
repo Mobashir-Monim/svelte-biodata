@@ -4,7 +4,7 @@
 	export let relative: RelativeInterface;
 </script>
 
-<div class="flex flex-col gap-0 w-full max-w-[300px] mx-auto">
+<div class="flex flex-col gap-0 w-full max-w-[350px] mx-auto">
 	<span class="border-b flex flex-row justify-between">
 		<span>{relative.name}</span>
 		<span class="text-[0.7rem] my-auto">({relative.relation})</span>
