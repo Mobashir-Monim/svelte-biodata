@@ -1,5 +1,6 @@
 <script lang="ts">
 	import InfoBlock from '../components/InfoBlock.svelte';
+	import InfoPoint from '../components/InfoPoint.svelte';
 	import RelativesBlock from '../components/RelativesBlock.svelte';
 	import type {
 		RelativeBranchInterface,
@@ -15,14 +16,21 @@
 	let education: EducationInterface[] = data.education;
 	let personalInfo: InfoPointInterface[] = data.personalInfo;
 	let family: RelativeInterface[] = data.family;
+	let addresses: InfoPointInterface[] = data.addresses;
 </script>
 
 <div class="flex md:flex-row gap-5 mb-16">
 	<InfoBlock points={personalInfo} header="Personal Information" />
-	<InfoBlock points={family} header="family" />
+	<InfoBlock points={family} header="Family" />
 </div>
 
-<div class="flex md:flex-row gap-5 mb-16">
+<div class="flex flex-row flex-wrap gap-5 justify-around mb-16">
+	{#each addresses as address}
+		<InfoPoint point={address} />
+	{/each}
+</div>
+
+<div class="flex md:flex-row gap-5 mb-16 break-after-page">
 	<InfoBlock points={jobs} header="Career" />
 	<InfoBlock points={education} header="Education" />
 </div>

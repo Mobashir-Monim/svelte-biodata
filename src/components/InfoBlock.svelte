@@ -15,7 +15,7 @@
 	export let classes: string = '';
 </script>
 
-<div class={`${classes} flex flex-col gap-3 w-full md:w-1/2`}>
+<div class={`flex flex-col gap-3 w-full md:w-1/2 ${classes} `}>
 	<h3 class="text-center text-[1.2rem] font-semibold">{header}</h3>
 
 	{#each points as point}
