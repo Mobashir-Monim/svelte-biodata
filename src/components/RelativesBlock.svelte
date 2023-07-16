@@ -8,7 +8,9 @@
 </script>
 
 <div class={`${classes} flex flex-col gap-5 w-full md:w-1/2 justify-between`}>
-	<h3 class="text-center text-[1.2rem]">{branch[0].toUpperCase()}{branch.slice(1)} Family</h3>
+	<h3 class="text-center font-semibold text-[1.2rem]">
+		{branch[0].toUpperCase()}{branch.slice(1)} Family
+	</h3>
 
 	{#each relatives as relative}
 		<Relative {relative} />
