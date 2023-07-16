@@ -19,18 +19,18 @@
 	let addresses: InfoPointInterface[] = data.addresses;
 </script>
 
-<div class="flex md:flex-row gap-5 mb-16">
+<div class="flex md:flex-row gap-5 my-16 justify-between">
 	<InfoBlock points={personalInfo} header="Personal Information" />
 	<InfoBlock points={family} header="Family" />
 </div>
 
-<div class="flex flex-row flex-wrap gap-5 justify-around mb-16">
+<div class="flex flex-row flex-wrap gap-5 justify-around my-16">
 	{#each addresses as address}
 		<InfoPoint point={address} />
 	{/each}
 </div>
 
-<div class="flex md:flex-row gap-5 mb-16 break-after-page">
+<div class="flex md:flex-row gap-5 my-16 break-after-page">
 	<InfoBlock points={jobs} header="Career" />
 	<InfoBlock points={education} header="Education" />
 </div>
